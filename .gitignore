@@ -1,0 +1,95 @@
+# Build results
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio / Rider
+.vs/
+.vscode/
+.idea/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+.vscode/
+.DS_Store
+
+# ABP Framework
+*.abppkg.analyze.json
+Logs/
+logs/
+*.log
+
+# ASP.NET Core
+appsettings.secrets.json
+appsettings.Development.json
+appsettings.Local.json
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.mdf
+*.ldf
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+package-lock.json
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Test results
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# JetBrains
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# Windows
+*.lnk
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Docker
+Dockerfile.local
+
+# Swagger
+swagger.json
+
+# EF Core Migrations backup
+*.Designer.cs.bak
+
+# ABP Studio files
+*.abpmdl
+*.abpsln
