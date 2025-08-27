@@ -1,0 +1,73 @@
+/* Global styles for React components integration */
+.dynamic-router {
+  width: 100%;
+}
+
+.multi-component-root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.react-component-wrapper {
+  width: 100%;
+}
+
+.component-not-found,
+.component-error,
+.dynamic-router-error {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  color: #721c24;
+}
+
+.component-not-found h3,
+.component-error h3,
+.dynamic-router-error h3 {
+  margin: 0 0 10px 0;
+  color: #721c24;
+}
+
+.available-components {
+  margin-top: 15px;
+}
+
+.available-components ul {
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.available-components li {
+  margin: 5px 0;
+  font-family: 'Courier New', monospace;
+  background: #fff3cd;
+  padding: 2px 6px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Multi-component container styles */
+.multi-component-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.component-wrapper {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .multi-component-root {
+    gap: 15px;
+  }
+  
+  .multi-component-container {
+    gap: 15px;
+  }
+}

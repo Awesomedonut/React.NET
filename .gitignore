@@ -93,3 +93,6 @@ swagger.json
 # ABP Studio files
 *.abpmdl
 *.abpsln
+
+# React build output (copied to .NET)
+src/MyAbpApp.Web/wwwroot/react-bundles/

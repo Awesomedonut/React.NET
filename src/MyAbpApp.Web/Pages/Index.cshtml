@@ -5,6 +5,8 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @using MyAbpApp.Localization
 @using Volo.Abp.Users
+@using MyAbpApp.Web.Helpers
+@using MyAbpApp.Web.Extensions
 @inject IPageLayout PageLayout
 @inject IHtmlLocalizer<MyAbpAppResource> L
 @inject ICurrentUser CurrentUser
@@ -15,7 +17,55 @@
 
 @section styles {
     <abp-style src="/Pages/Index.css" />
+    @{
+        var cssFile = ReactBundleHelper.GetSingleCssFile();
+        if (!string.IsNullOrEmpty(cssFile))
+        {
+            <link href="@cssFile" rel="stylesheet" />
+        }
+    }
 }
+
+@section scripts {
+    @{
+        var jsFile = ReactBundleHelper.GetSingleJsFile();
+        if (!string.IsNullOrEmpty(jsFile))
+        {
+            <script src="@jsFile"></script>
+        }
+    }
+}
+
+<div class="row mb-3">
+    <div class="col-12">
+        @Html.ReactWelcomeWidget("react-welcome-enhanced", "Enhanced Welcome Widget", 5000)
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-lg-8">
+        @Html.ReactDashboardWidget("react-dashboard-enhanced", "Project Dashboard", 15000)
+    </div>
+    <div class="col-lg-4">
+        @{
+            var userData = new
+            {
+                name = CurrentUser.Name ?? "Guest User",
+                email = CurrentUser.Email ?? "guest@example.com",
+                role = CurrentUser.IsAuthenticated ? "User" : "Guest",
+                status = CurrentUser.IsAuthenticated ? "Active" : "Guest",
+                joinDate = DateTime.Now.AddMonths(-6).ToString("MM/dd/yyyy")
+            };
+        }
+        @Html.ReactUserProfile("react-profile-enhanced", userData, CurrentUser.IsAuthenticated)
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-12">
+        <div id="react-welcome-widget"></div>
+    </div>
+</div>
 
 <div class="row mb-3">
     <div class="col-xl-6 col-12 d-flex">
