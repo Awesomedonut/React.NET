@@ -2,6 +2,16 @@
 
 ## About this solution
 
+
+This is a lightweight solution that allows for React comonents to be reused in ABP MVC/Razor pages.
+
+This is accomplished by using a dynamic router system for React components; there is a component registry system that new React components must be added to. Once registered, the system can take the the React bundles at runtime, and inject them into the .NET frontend using the exention methods.
+
+
+
+
+
+
 This is a layered startup solution based on [Domain Driven Design (DDD)](https://abp.io/docs/latest/framework/architecture/domain-driven-design) practises. All the fundamental ABP modules are already installed. Check the [Application Startup Template](https://abp.io/docs/latest/solution-templates/layered-web-application) documentation for more info.
 
 ### Pre-requirements
