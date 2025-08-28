@@ -1,4 +1,4 @@
-﻿# MyAbpApp
+﻿# React.NET
 
 ## About this solution
 
@@ -29,6 +29,11 @@ The solution comes with a default configuration that works out of the box. Howev
 
 * Run `abp install-libs` command on your solution folder to install client-side package dependencies. This step is automatically done when you create a new solution, if you didn't especially disabled it. However, you should run it yourself if you have first cloned this solution from your source control, or added a new client-side package dependency to your solution.
 * Run `MyAbpApp.DbMigrator` to create the initial database. This step is also automatically done when you create a new solution, if you didn't especially disabled it. This should be done in the first run. It is also needed if a new database migration is added to the solution later.
+* Run `npm install` on the React component
+
+### Running the application
+
+Run the .NET component with `dotnet run --project src/MyAbpApp.Web` and the React component with `npm run start`
 
 #### Generating a Signing Certificate
 
@@ -66,3 +71,4 @@ You can see the following resources to learn more about your solution and the AB
 
 * [Web Application Development Tutorial](https://abp.io/docs/latest/tutorials/book-store/part-1)
 * [Application Startup Template](https://abp.io/docs/latest/startup-templates/application/index)
+
